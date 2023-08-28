@@ -1,0 +1,15 @@
+{
+  "name": "vuejs-training",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Noritaka IZUMI <noritaka.izumi@gmail.com>",
+  "license": "MIT",
+  "volta": {
+    "node": "18.17.1"
+  }
+}
