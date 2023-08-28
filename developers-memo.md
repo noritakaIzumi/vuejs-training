@@ -36,14 +36,14 @@ Vue.js - The Progressive JavaScript Framework
 
 ✔ Current directory is not empty. Remove existing files and continue? … yes
 ✔ Package name: … vuejs-training
-✔ Add TypeScript? … No / Yes
-✔ Add JSX Support? … No / Yes
-✔ Add Vue Router for Single Page Application development? … No / Yes
-✔ Add Pinia for state management? … No / Yes
-✔ Add Vitest for Unit Testing? … No / Yes
+✔ Add TypeScript? … Yes
+✔ Add JSX Support? … Yes
+✔ Add Vue Router for Single Page Application development? … Yes
+✔ Add Pinia for state management? … Yes
+✔ Add Vitest for Unit Testing? … Yes
 ✔ Add an End-to-End Testing Solution? › Playwright
-✔ Add ESLint for code quality? … No / Yes
-✔ Add Prettier for code formatting? … No / Yes
+✔ Add ESLint for code quality? … Yes
+✔ Add Prettier for code formatting? … Yes
 
 Scaffolding project in /home/noritaka-izumi/sources/vuejs-training...
 
