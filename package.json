@@ -2,6 +2,12 @@
   "name": "vuejs-training",
   "version": "0.0.1",
   "private": true,
+  "keywords": [],
+  "author": "Noritaka IZUMI <noritaka.izumi@gmail.com>",
+  "license": "MIT",
+  "volta": {
+    "node": "18.17.1"
+  },
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
@@ -11,7 +17,10 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "format": "prettier --write src/"
+    "lint:one": "eslint --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "format": "prettier --write src/",
+    "format:one": "prettier --write",
+    "prepare": "husky install"
   },
   "dependencies": {
     "pinia": "^2.1.6",
@@ -32,7 +41,9 @@
     "@vue/tsconfig": "^0.4.0",
     "eslint": "^8.46.0",
     "eslint-plugin-vue": "^9.16.1",
+    "husky": "^8.0.0",
     "jsdom": "^22.1.0",
+    "lint-staged": "^14.0.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.0.0",
     "typescript": "~5.1.6",
@@ -40,10 +51,10 @@
     "vitest": "^0.34.2",
     "vue-tsc": "^1.8.8"
   },
-  "keywords": [],
-  "author": "Noritaka IZUMI <noritaka.izumi@gmail.com>",
-  "license": "MIT",
-  "volta": {
-    "node": "18.17.1"
+  "lint-staged": {
+    "*.(vue|js|jsx|cjs|mjs|ts|tsx|cts|mts)": [
+      "npm run format:one",
+      "npm run lint:one"
+    ]
   }
 }
