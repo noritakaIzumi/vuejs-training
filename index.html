@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vite App</title>
-  </head>
-  <body>
-  <div id="app">
-    <button @click="count++">{{ count }}</button>
-  </div>
-  <!--<script type="module" src="/src/main.ts"></script>-->
-  <script type="module" src="/src/tutorial.ts"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vite App</title>
+</head>
+<body>
+<div id="app">
+  <button @click="count++">{{ count }}</button>
+  <br>
+  <span>Message: {{ msg }}</span>
+
+  <p>Using text interpolation: {{ rawHtml }}</p>
+  <p>Using v-html directive: <span v-html="rawHtml"></span></p>
+</div>
+<!--<script type="module" src="/src/main.ts"></script>-->
+<script type="module" src="/src/tutorial.ts"></script>
+</body>
 </html>
