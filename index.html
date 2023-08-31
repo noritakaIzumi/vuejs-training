@@ -14,6 +14,18 @@
 
   <p>Using text interpolation: {{ rawHtml }}</p>
   <p>Using v-html directive: <span v-html="rawHtml"></span></p>
+
+  <div v-bind:id="1">dynamic id: 1</div>
+  <div v-bind:id="0">dynamic id: 0</div>
+  <div v-bind:id="null">dynamic id: null</div>
+  <div v-bind:id="undefined">dynamic id: undefined</div>
+  <div :id="1">shorthand dynamic id: 1</div>
+  <div :id="null">shorthand dynamic id: null</div>
+
+  <button :disabled="true">Disabled button</button>
+  <button :disabled="false">Enabled button</button>
+
+  <div v-bind="objectOfAttrs">objectOfAttrs</div>
 </div>
 <!--<script type="module" src="/src/main.ts"></script>-->
 <script type="module" src="/src/tutorial.ts"></script>
