@@ -26,6 +26,16 @@
   <button :disabled="false">Enabled button</button>
 
   <div v-bind="objectOfAttrs">objectOfAttrs</div>
+
+  <!-- Using JavaScript Expressions -->
+  <div>{{ number + 1 }}</div>
+  <div>{{ ok ? "YES" : "NO" }}</div>
+  <div>{{ ng ? "YES" : "NO" }}</div>
+  <div>{{ msg.split("").reverse().join("") }}</div>
+  <div :id="`list-${number}`"></div>
+  <time :title="toTitleDate(date)" :datetime="date">
+    {{ formatDate(date) }}
+  </time>
 </div>
 <!--<script type="module" src="/src/main.ts"></script>-->
 <script type="module" src="/src/tutorial.ts"></script>

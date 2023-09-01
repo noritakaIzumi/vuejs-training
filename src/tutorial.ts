@@ -10,6 +10,13 @@ const app = createApp({
         id: "container",
         class: "wrapper",
       },
+      number: 1,
+      ok: true,
+      ng: false,
+      date: new Date(),
+      toTitleDate: (date: Date) => `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`,
+      formatDate: (date: Date) =>
+        `${date.getFullYear()} 年 ${date.getMonth() + 1} 月 ${date.getDate()} 日`,
     }
   },
 })
