@@ -36,6 +36,22 @@
   <time :title="toTitleDate(date)" :datetime="date">
     {{ formatDate(date) }}
   </time>
+
+  <!-- Directives -->
+  <p v-if="seen">Now you see me</p>
+  <p v-else>Now you don't see me</p>
+  <a :href="url" target="_blank">Link</a>
+  <br>
+  <a :href="'#'" @click="count++">count up</a>
+  <br>
+  <a v-bind:[attribute_name]="url">dynamic arguments</a>
+  <p>We cannot use camel case as attribute name. <a
+    href="https://stackoverflow.com/questions/68620083/vue-js-dynamic-directive-argument-not-working" target="_blank">Link</a>
+  </p>
+  <a :href="'#'" @[action]="count++">count up (dynamic argument)</a>
+  <form @submit.prevent="onSubmit">
+    <button type="submit">Submit</button>
+  </form>
 </div>
 <!--<script type="module" src="/src/main.ts"></script>-->
 <script type="module" src="/src/tutorial.ts"></script>

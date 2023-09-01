@@ -17,6 +17,13 @@ const app = createApp({
       toTitleDate: (date: Date) => `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`,
       formatDate: (date: Date) =>
         `${date.getFullYear()} 年 ${date.getMonth() + 1} 月 ${date.getDate()} 日`,
+      seen: true,
+      url: "https://google.co.jp",
+      attribute_name: "href",
+      action: "click",
+      onSubmit: () => {
+        alert("hello, world!")
+      },
     }
   },
 })
